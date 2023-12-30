@@ -1,527 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Arusuvai-Order Form</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@100;300;400;500&display=swap"
-rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-<script>
-function Total(qty,ud,total,value){
- qty=document.getElementById(qty);
- ud>0?qty.value++:qty.value--;
- qty.value=Math.max(qty.value,0);
- document.getElementById(total).value=qty.value*value;
-} </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@100;300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <script>
+    function Total(qty, ud, total, value) {
+      qty = document.getElementById(qty);
+      ud > 0 ? qty.value++ : qty.value--;
+      qty.value = Math.max(qty.value, 0);
+      document.getElementById(total).value = qty.value * value;
+    } </script>
   <style type="text/css">
-  @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
-body{
-  background: url('http://all4desktop.com/data_images/original/4236532-background-images.jpg');
-  color: #262626;
-}
-img:hover
-              {
-                 transform:scale(1.08);
-              }
-   #img
-{
-             position: sticky;
-             z-index: -1;
-float:left;
-            }
-#s1
-{
- float:right;
- border:none;
-}
-#up
-{
-position:fixed;
-right:10px;
-bottom:10px;
-width:50px;
-height:50px;
-border-radius:50%;
-background:#e62739;
-box-shadow: 0 0 10px rgba(0,0,0,0.25);
-color:#ffffff;
-border:none;
-outline:none;
-cursor:pointer;
-}
-.container{
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 1200px)
-{
-  .container{
-    max-width: 1140px;
-  }
-}
-.d-flex{
-  display: flex;
-  flex-direction: row;
-  background: #f6f6f6;
-  border-radius: 0 0 5px 5px;
-  padding: 25px;
-}
-form{
-  flex: 4;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-.Yorder{
-  flex: 2;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-.title{
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195A8), color-stop(100, #70EAFF));
-  background: -moz-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
-  background: -ms-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
-  background: -o-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
-  background: linear-gradient(to bottom right, #5195A8 0%, #70EAFF 100%);
-  border-radius:5px 5px 0 0 ;
-  padding: 20px;
-  color: #f6f6f6;
-}
-h2{
-  margin: 0;
-  padding-left: 15px;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-.required{
-  color: red;
-}
-label, table{
-  display: block;
-  margin: 15px;
-}
-label>span{
-  float: left;
-  width: 25%;
-  margin-top: 12px;
-  padding-right: 10px;
-}
-input[type="text"], input[type="tel"], input[type="email"], select
-{
-  width: 70%;
-  height: 30px;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-  border: 1px solid #dadada;
-  color: #888;
-}
-select{
-  width: 72%;
-  height: 45px;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-}
-.Yorder{
-  margin-top: 15px;
-  height: 600px;
-  padding: 20px;
-  border: 1px solid #dadada;
-}
-table{
-  margin: 0;
-  padding: 0;
-}
-th{
-  border-bottom: 1px solid #dadada;
-  padding: 10px 0;
-}
-tr>td:nth-child(1){
-  text-align: left;
-  color: #2d2d2a;
-}
-tr>td:nth-child(2){
-  text-align: right;
-  color: #52ad9c;
-}
-td{
-  border-bottom: 1px solid #dadada;
-  padding: 25px 25px 25px 0;
-}
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 
-p{
-  display: block;
-  color: #888;
-  margin: 0;
-  padding-left: 25px;
-}
-.Yorder>div{
-  padding: 15px 0;
-}
+    body {
+      background: url('http://all4desktop.com/data_images/original/4236532-background-images.jpg');
+      color: #262626;
+    }
 
-button{
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  border: none;
-  border-radius: 30px;
-  background: #52ad9c;
-  color: #fff;
-  font-size: 15px;
-  font-weight: bold;
-}
-button:hover{
-  cursor: pointer;
-  background: #428a7d;
-}
-.footer{
-    background:#282727;
-    padding:1rem 7%;
-}
+    img:hover {
+      transform: scale(1.08);
+    }
 
-.footer .box-container{
-    display: flex;
-    flex-wrap: wrap;
-}
+    #img {
+      position: sticky;
+      z-index: -1;
+      float: left;
+    }
 
-.footer .box-container .box{
-    flex:1 1 11rem;
-    margin:1rem;
-}
+    #s1 {
+      float: right;
+      border: none;
+    }
 
-.footer .box-container .box h3{
-    font-size: 1.5rem;
-    color:#fff;
-    padding:1rem 0;
-    font-weight: normal;
-}
+    #up {
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #e62739;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      color: #ffffff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
 
-.footer .box-container .box p{
-    font-size: 1.5rem;
-    color:#eee;
-    padding:1rem 0;
-}
+    .container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
 
-.footer .box-container .box a{
-    font-size: 1.5rem;
-    color:#eee;
-    padding:1rem 0;
-    display: block;
-}
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1140px;
+      }
+    }
 
-.footer .box-container .box a:hover{
-    color:var(--yellow);
-}
+    .d-flex {
+      display: flex;
+      flex-direction: row;
+      background: #f6f6f6;
+      border-radius: 0 0 5px 5px;
+      padding: 25px;
+    }
 
-.footer .box-container .box p i{
+    form {
+      flex: 4;
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .Yorder {
+      flex: 2;
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .title {
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195A8), color-stop(100, #70EAFF));
+      background: -moz-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+      background: -ms-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+      background: -o-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+      background: linear-gradient(to bottom right, #5195A8 0%, #70EAFF 100%);
+      border-radius: 5px 5px 0 0;
+      padding: 20px;
+      color: #f6f6f6;
+    }
+
+    h2 {
+      margin: 0;
+      padding-left: 15px;
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .required {
+      color: red;
+    }
+
+    label,
+    table {
+      display: block;
+      margin: 15px;
+    }
+
+    label>span {
+      float: left;
+      width: 25%;
+      margin-top: 12px;
+      padding-right: 10px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select {
+      width: 70%;
+      height: 30px;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      border: 1px solid #dadada;
+      color: #888;
+    }
+
+    select {
+      width: 72%;
+      height: 45px;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+    }
+
+    .Yorder {
+      margin-top: 15px;
+      height: 600px;
+      padding: 20px;
+      border: 1px solid #dadada;
+    }
+
+    table {
+      margin: 0;
+      padding: 0;
+    }
+
+    th {
+      border-bottom: 1px solid #dadada;
+      padding: 10px 0;
+    }
+
+    tr>td:nth-child(1) {
+      text-align: left;
+      color: #2d2d2a;
+    }
+
+    tr>td:nth-child(2) {
+      text-align: right;
+      color: #52ad9c;
+    }
+
+    td {
+      border-bottom: 1px solid #dadada;
+      padding: 25px 25px 25px 0;
+    }
+
+    p {
+      display: block;
+      color: #888;
+      margin: 0;
+      padding-left: 25px;
+    }
+
+    .Yorder>div {
+      padding: 15px 0;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 30px;
+      background: #52ad9c;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background: #428a7d;
+    }
+
+    .footer {
+      background: #282727;
+      padding: 1rem 7%;
+    }
+
+    .footer .box-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .footer .box-container .box {
+      flex: 1 1 11rem;
+      margin: 1rem;
+    }
+
+    .footer .box-container .box h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      padding: 1rem 0;
+      font-weight: normal;
+    }
+
+    .footer .box-container .box p {
+      font-size: 1.5rem;
+      color: #eee;
+      padding: 1rem 0;
+    }
+
+    .footer .box-container .box a {
+      font-size: 1.5rem;
+      color: #eee;
+      padding: 1rem 0;
+      display: block;
+    }
+
+    .footer .box-container .box a:hover {
+      color: var(--yellow);
+    }
+
+    .footer .box-container .box p i {
       padding-right: 0.5rem;
-    color:var(--yellow);
-}
-.footer .credit{
-    font-size: 1.5rem;
-    text-align: center;
-    border-top: .2rem solid rgba(255,255,255,.7);
-    padding:2rem 1rem;
-    font-weight: normal;
-    letter-spacing: .1rem;
-    color:#fff;
-}
-.footer .credit a{
-    color:var(--yellow);
-}
-header{
-    width:100%;
-    display: flex;
-    align-items: center;
-    background:#fff;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    position: fixed;
-    top: 0; left: 0;
-    z-index: 1000;
-}
-header .logo img{
-    height:4rem;
-}
-header .navbar a{
-    font-size: 2rem;
-    color:#aaa;
-    margin-left: 2rem;
-}
-header .navbar a:hover{
-    color:var(--green);
-}
-#menu{
-    font-size: 3rem;
-    color:#666;
-    cursor: pointer;
-    padding:.5rem 1rem;
-    border:.2rem solid rgba(0,0,0,.2);
-    border-radius: .5rem;
-    display: none;
-}
-@media (max-width:788px){
-    #menu{
+      color: var(--yellow);
+    }
+
+    .footer .credit {
+      font-size: 1.5rem;
+      text-align: center;
+      border-top: .2rem solid rgba(255, 255, 255, .7);
+      padding: 2rem 1rem;
+      font-weight: normal;
+      letter-spacing: .1rem;
+      color: #fff;
+    }
+
+    .footer .credit a {
+      color: var(--yellow);
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    header .logo img {
+      height: 4rem;
+    }
+
+    header .navbar a {
+      font-size: 2rem;
+      color: #aaa;
+      margin-left: 2rem;
+    }
+
+    header .navbar a:hover {
+      color: var(--green);
+    }
+
+    #menu {
+      font-size: 3rem;
+      color: #666;
+      cursor: pointer;
+      padding: .5rem 1rem;
+      border: .2rem solid rgba(0, 0, 0, .2);
+      border-radius: .5rem;
+      display: none;
+    }
+
+    @media (max-width:788px) {
+      #menu {
         display: block;
-    }
-header .logo img{
-    height:4rem;
-width:400px;
-}
-    header{
-        padding:0.2rem;
-    }
-    header .navbar{
+      }
+
+      header .logo img {
+        height: 4rem;
+        width: 400px;
+      }
+
+      header {
+        padding: 0.2rem;
+      }
+
+      header .navbar {
         position: absolute;
-        top:100%;
-        left:0;
-        width:100%;
-        background:#f9f9f9;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #f9f9f9;
         text-align: center;
-        padding:2rem 0;
-        border-top: .1rem solid rgba(0,0,0,.1);
+        padding: 2rem 0;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
         transform: scaleY(0);
         transform-origin: top;
         opacity: 0;
-    }
-    header .navbar.nav-toggle{
+      }
+
+      header .navbar.nav-toggle {
         transform: scaleY(1);
         opacity: 1;
-    }
-    header .navbar a{
+      }
+
+      header .navbar a {
         display: block;
         font-size: 2.0rem;
+      }
     }
- </style>
+  </style>
 </head>
+
 <body>
-<button id="up"><i class="material-icons">arrow_upward</i></button>
-<script>
- const up = document.querySelector('#up');
- up.addEventListener("click",function()
- {
- $("html,body").animate({scrollTop:0},"slow");
- });
-</script>
-<header>
-<div id="menu" class="fas fa-bars"></div>
-<a href="#" class="logo"><img id="img" src="1.png" width="250" height="120"></a>
-             <nav class="navbar">
-				<a href="index.html" target="_blank">HOME</a>
-				<a href="About.html" target="_blank">ABOUT</a>
-				<a href="New folder/Gallery.html" target="_blank">GALLERY</a>
-				<a href="New folder/menu.html" target="_blank">MENU</a>
-				<a href="Icontact.html" target="_blank">CONTACT</a>
-			    <a href="login.html" target="_blank">LOGIN</a>
-<table class="s1">
-<a><img width='30' height='30' src='facebook.webp'></a>
-<a><img width='30' height='30' src='insta.jpg'></a>
-<a><img width='30' height='30' src='twitter.png'></a>
-  </table>
-         </nav></header>
-<br><br><br><br>
+  <button id="up"><i class="material-icons">arrow_upward</i></button>
+  <script>
+    const up = document.querySelector('#up');
+    up.addEventListener("click", function () {
+      $("html,body").animate({ scrollTop: 0 }, "slow");
+    });
+  </script>
+  <header>
+    <div id="menu" class="fas fa-bars"></div>
+    <a href="#" class="logo"><img id="img" src="images/logo.png" width="250" height="120"></a>
+    <nav class="navbar">
+      <a href="index.html">HOME</a>
+      <a href="About.html">ABOUT</a>
+      <a href="Gallery.html">GALLERY</a>
+      <a href="menu.html">MENU</a>
+      <a href="Icontact.html">CONTACT</a>
+      <a href="login.html">LOGIN</a>
+      <table class="s1">
+        <a><img width='30' height='30' src="images/facebook.webp"></a>
+        <a><img width='30' height='30' src="images/insta.jpg"></a>
+        <a><img width='30' height='30' src="images/twitter.png"></a>
+      </table>
+    </nav>
+  </header>
+  <br><br><br><br>
   <div class="container">
-  <div class="title">
+    <div class="title">
       <h2>Arusuvai Organic Foods</h2>
-  </div>
-<div class="d-flex">
- <body style="background-color:powderblue;">
-  <form name="orderform">
-    <label>
-      <span class="fname">First Name <span class="required">*</span></span>
-      <input type="text" name="fname" id="fn"required pattern="[A-Za-z]{3,}">
-    </label>
-    <label>
-      <span class="lname">Last Name <span class="required">*</span></span>
-      <input type="text" name="lname" id="ln" required pattern="[A-Za-z]{3,}">
-    </label>
-   
-    <label>
-      <span>Street Address <span class="required">*</span></span>
-      <input type="text" name="houseadd" placeholder="House number and street name" id="sa" required>
-    </label>
-    <label>
-      <span>&nbsp;</span>
-      <input type="text" name="apartment" id="ap" placeholder="Apartment,  unit etc. (optional)">
-    </label>
-    <label>
-      <span>City <span class="required">*</span></span>
-      <input type="text" name="city" id="city" required>
-    </label>
-    <label>
-      <span>State <span class="required">*</span></span>
-      <input type="text" name="city" id="state" required>
-    </label>
-    <label>
-      <span>Pincode<span class="required">*</span></span>
-      <input type="text" name="city" id="pin" required pattern="[0-9]{6}">
-    </label>
-    <label>
-      <span>Phone <span class="required">*</span></span>
-      <input type="tel" name="city" id="phn" required pattern="[0-9]{10}">
-    </label>
-    <label>
-      <span>Email Address <span class="required">*</span></span>
-      <input type="email" name="city" id="eid" required>
-    </label>
-  </form>
-  <div class="Yorder">
-    <table>
-      <tr>
-        <th colspan="2">Your order</th>
-      </tr>
-      <tr>
-        <div id="purhcaseForm">
-<form id="purchase" name="purchase">
-<br> Item Price: Rs.100
-<br> Please Select Quantity
-<input type='button' name='subtract' onclick='Total("qty",-1,"total",100);' value='-'/>
-<input type='button' name='add' onclick='Total("qty",1,"total",100);' value='+'/>
-<input type='text' name='qty' id='qty' readonly=true value="0"/><br>
-Total<br>
-<input type='text' name='total' id='total' value="0" />
-      </form>
-</div>
-      </tr>
-	  <form name="ship">
-      <tr>
-        <td>Shipping</td>
-        <td>Free shipping</td>
-      </tr>
-    </table><br>
-    <div>
-      <input type="radio" name="dbt" value="dbt"> Direct Bank Transfer
     </div>
-    <p>
-        Make your payment directly into our bank account.
-Please use your Order ID as the payment reference. Your order will not be shipped until
-the funds have cleared in our account.
-    </p>
-    <div>
-      <input type="radio" name="dbt" value="cd"> Cash on Delivery
+    <div class="d-flex">
+
+      <body style="background-color:powderblue;">
+        <form name="orderform">
+          <label>
+            <span class="fname">First Name <span class="required">*</span></span>
+            <input type="text" name="fname" id="fn" required pattern="[A-Za-z]{3,}">
+          </label>
+          <label>
+            <span class="lname">Last Name <span class="required">*</span></span>
+            <input type="text" name="lname" id="ln" required pattern="[A-Za-z]{3,}">
+          </label>
+
+          <label>
+            <span>Street Address <span class="required">*</span></span>
+            <input type="text" name="houseadd" placeholder="House number and street name" id="sa" required>
+          </label>
+          <label>
+            <span>&nbsp;</span>
+            <input type="text" name="apartment" id="ap" placeholder="Apartment,  unit etc. (optional)">
+          </label>
+          <label>
+            <span>City <span class="required">*</span></span>
+            <input type="text" name="city" id="city" required>
+          </label>
+          <label>
+            <span>State <span class="required">*</span></span>
+            <input type="text" name="city" id="state" required>
+          </label>
+          <label>
+            <span>Pincode<span class="required">*</span></span>
+            <input type="text" name="city" id="pin" required pattern="[0-9]{6}">
+          </label>
+          <label>
+            <span>Phone <span class="required">*</span></span>
+            <input type="tel" name="city" id="phn" required pattern="[0-9]{10}">
+          </label>
+          <label>
+            <span>Email Address <span class="required">*</span></span>
+            <input type="email" name="city" id="eid" required>
+          </label>
+        </form>
+        <div class="Yorder">
+          <table>
+            <tr>
+              <th colspan="2">Your order</th>
+            </tr>
+            <tr>
+              <div id="purhcaseForm">
+                <form id="purchase" name="purchase">
+                  <br> Item Price: Rs.100
+                  <br> Please Select Quantity
+                  <input type='button' name='subtract' onclick='Total("qty",-1,"total",100);' value='-' />
+                  <input type='button' name='add' onclick='Total("qty",1,"total",100);' value='+' />
+                  <input type='text' name='qty' id='qty' readonly=true value="0" /><br>
+                  Total<br>
+                  <input type='text' name='total' id='total' value="0" />
+                </form>
+              </div>
+            </tr>
+            <form name="ship">
+              <tr>
+                <td>Shipping</td>
+                <td>Free shipping</td>
+              </tr>
+          </table><br>
+          <div>
+            <input type="radio" name="dbt" value="dbt"> Direct Bank Transfer
+          </div>
+          <p>
+            Make your payment directly into our bank account.
+            Please use your Order ID as the payment reference. Your order will not be shipped until
+            the funds have cleared in our account.
+          </p>
+          <div>
+            <input type="radio" name="dbt" value="cd"> Cash on Delivery
+          </div>
+          <div>
+            <input type="radio" name="dbt" value="cd"> Paypal <span>
+              <img src="https://www.logolynx.com/images/logolynx/c3/c36093ca9fb6c250f74d319550acac4d.jpeg" width="50">
+            </span>
+          </div>
+          </form>
+          <button type="submit" onclick="return(myFunction(fn,ln,sa,city,state,pin,phn,eid))">Place Order</button>
+        </div>
     </div>
-    <div>
-      <input type="radio" name="dbt" value="cd"> Paypal <span>
-      <img src="https://www.logolynx.com/images/logolynx/c3/c36093ca9fb6c250f74d319550acac4d.jpeg"  width="50">
-      </span>
-    </div></form>
-    <button type="submit" onclick="return(myFunction(fn,ln,sa,city,state,pin,phn,eid))">Place Order</button>
-  </div>
- </div>
-</div><br><br><br>
-<div class="footer">
+  </div><br><br><br>
+  <div class="footer">
     <div class="box-container">
-        <div class="box">
-            <h3>Contact Info</h3>
-            <p><i class="fas fa-map-marker-alt">  </i>Chennai-600020,India</p>
-            <p><i class="fas fa-envelope">  </i>Arusuvai@gmail.com</p>
-            <p><i class="fas fa-phone">  </i>+000-000-000</p>
-            <p><i class="fas fa-phone">  </i>+111-222-333</p>
-        </div>
-        <div class="box">
-            <h3>Branch Location</h3>
-            <a href="#">India</a>
-            <a href="#">USA</a>
-            <a href="#">France</a>
-            <a href="#">Russia</a>
-        </div>
-        <div class="box">
-            <h3>Quick Links </h3>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Menu</a>
-            <a href="#">Gallery</a>
-            <a href="#">Login</a>
-        </div>
-        <div class="box">
-            <h3>Follow Us</h3>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Linkedin</a>
-        </div>
+      <div class="box">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"> </i>Chennai-600020,India</p>
+        <p><i class="fas fa-envelope"> </i>Arusuvai@gmail.com</p>
+        <p><i class="fas fa-phone"> </i>+000-000-000</p>
+        <p><i class="fas fa-phone"> </i>+111-222-333</p>
+      </div>
+      <div class="box">
+        <h3>Branch Location</h3>
+        <a href="#">India</a>
+        <a href="#">USA</a>
+        <a href="#">France</a>
+        <a href="#">Russia</a>
+      </div>
+      <div class="box">
+        <h3>Quick Links </h3>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Menu</a>
+        <a href="#">Gallery</a>
+        <a href="#">Login</a>
+      </div>
+      <div class="box">
+        <h3>Follow Us</h3>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Linkedin</a>
+      </div>
     </div>
     <h1 class="credit">© Copyright 2023 - Arusuvai. All Rights Reserved.</h1>
-</div>
-<script>
-function myFunction(fn,ln,sa,city,state,pin,phn,eid)
- {
-     if(!fn.checkValidity())
-					  {
-						 alert("Enter Firstname correctly!!!!");
-						 return false;
-					  }
-					  else if(!ln.checkValidity())
-					  {
-						 alert("Enter Lastname correctly!!!!");
-						 return false;
-					  }
-					  else if(!sa.checkValidity())
-					  {
-						 alert("Street address is required");
-						 return false;
-					  }
-					  else if(!city.checkValidity())
-					  {
-						 alert("Enter city correctly!!!!");
-						 return false;
-					  }
-					  else if(!state.checkValidity())
-					  {
-						 alert("Enter state correctly!!!!");
-						 return false;
-					  }
-					  else if(!pin.checkValidity())
-					  {
-						 alert("Enter pincode correctly!!!!");
-						 return false;
-					  }
-					  else if(!phn.checkValidity())
-					  {
-						 alert("Enter phone number correctly!!!!");
-						 return false;
-					  }
-					  else if(!eid.checkValidity())
-					  {
-						 alert("Enter email correctly!!!!");
-						 return false;
-					  }
-					else
-					{
-						alert("Successfully Ordered");
-						document.orderform.reset();
-						document.purchase.reset();
-						document.ship.reset();
-						return true;
-					}
- }
-</script>
-<script>$(document).ready(function(){
-  $('#menu').click(function(){
-      $(this).toggleClass('fa-times');
-      $('.navbar').toggleClass('nav-toggle');
-  });
-  $(window).on('load scroll',function(){
-    $('#menu').removeClass('fa-times');
-    $('.navbar').removeClass('nav-toggle');
-    if($(window).scrollTop() > 0){
-      $('#scroll-top').show();
-    }else{
-      $('#scroll-top').hide();
+  </div>
+  <script>
+    function myFunction(fn, ln, sa, city, state, pin, phn, eid) {
+      if (!fn.checkValidity()) {
+        alert("Enter Firstname correctly!!!!");
+        return false;
+      }
+      else if (!ln.checkValidity()) {
+        alert("Enter Lastname correctly!!!!");
+        return false;
+      }
+      else if (!sa.checkValidity()) {
+        alert("Street address is required");
+        return false;
+      }
+      else if (!city.checkValidity()) {
+        alert("Enter city correctly!!!!");
+        return false;
+      }
+      else if (!state.checkValidity()) {
+        alert("Enter state correctly!!!!");
+        return false;
+      }
+      else if (!pin.checkValidity()) {
+        alert("Enter pincode correctly!!!!");
+        return false;
+      }
+      else if (!phn.checkValidity()) {
+        alert("Enter phone number correctly!!!!");
+        return false;
+      }
+      else if (!eid.checkValidity()) {
+        alert("Enter email correctly!!!!");
+        return false;
+      }
+      else {
+        alert("Successfully Ordered");
+        document.orderform.reset();
+        document.purchase.reset();
+        document.ship.reset();
+        return true;
+      }
     }
-  });
-  $('a[href*="#"]').on('click',function(e){
-    e.preventDefault();
-    $('html, body').animate({
-      scrollTop : $($(this).attr('href')).offset().top,
-    },
-      500,
-      'linear'
-    );
-  });
-});</script>
+  </script>
+  <script>$(document).ready(function () {
+      $('#menu').click(function () {
+        $(this).toggleClass('fa-times');
+        $('.navbar').toggleClass('nav-toggle');
+      });
+      $(window).on('load scroll', function () {
+        $('#menu').removeClass('fa-times');
+        $('.navbar').removeClass('nav-toggle');
+        if ($(window).scrollTop() > 0) {
+          $('#scroll-top').show();
+        } else {
+          $('#scroll-top').hide();
+        }
+      });
+      $('a[href*="#"]').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+          scrollTop: $($(this).attr('href')).offset().top,
+        },
+          500,
+          'linear'
+        );
+      });
+    });</script>
 </body>
+
 </html>

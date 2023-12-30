@@ -1,127 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="form">
-        <div class="contact-info">
-          <h3 class="title">Let's get in touch</h3>
-          <p class="text">
-            Arusuvai Organic Foods are healthier, fresher, and richer in taste. 
-			Healthy eating has endless advantages!!
-          </p>
-          <div class="info">
-            <div class="information">
-              <img src="location.png" class="icon" alt="" />
-              <p>21 ArusuvaiFoods Teynampet 600020</p>
-            </div>
-            <div class="information">
-              <img src="email.png" class="icon" alt="" />
-              <p>Arusuvai@gmail.com</p>
-            </div>
-            <div class="information">
-              <img src="phone.png" class="icon" alt="" />
-              <p>123-456-789</p>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Let's get in touch</h3>
+        <p class="text">
+          Arusuvai Organic Foods are healthier, fresher, and richer in taste.
+          Healthy eating has endless advantages!!
+        </p>
+        <div class="info">
+          <div class="information">
+            <img src="images/location.png" class="icon" alt="" />
+            <p>21 ArusuvaiFoods Teynampet 600020</p>
           </div>
-          <div class="social-media">
-            <p>Connect with us :</p>
-            <div class="social-icons">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
+          <div class="information">
+            <img src="images/email.png" class="icon" alt="" />
+            <p>Arusuvai@gmail.com</p>
+          </div>
+          <div class="information">
+            <img src="images/phone.png" class="icon" alt="" />
+            <p>123-456-789</p>
           </div>
         </div>
-
-        <div class="contact-form">
-          <form autocomplete="off">
-            <h3 class="title">Leave us a message</h3>
-            <div class="input-container">
-              <input type="text" name="name" id="uname" class="input"  required pattern="[A-Za-z]{3,}">
-              <label for="">Username</label>
-              <span>Username</span>
-            </div>
-            <div class="input-container">
-              <input type="email" name="email" id="email" class="input" required>
-              <label for="">Email</label>
-              <span>Email</span>
-            </div>
-            <div class="input-container">
-              <input type="tel" name="phone" id="phone" class="input" required pattern="[0-9]{10}">
-              <label for="">Phone</label>
-              <span>Phone</span>
-            </div>
-            <div class="input-container textarea">
-              <textarea name="message" id="message" class="input" required maxlength="50"></textarea>
-              <label for="">Message</label>
-              <span>Message</span>
-            </div>
-            <input type="submit" value="Send" class="btn" onclick="return(send(uname,email,phone,message))">
-          </form>
+        <div class="social-media">
+          <p>Connect with us :</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
         </div>
       </div>
+
+      <div class="contact-form">
+        <form autocomplete="off">
+          <h3 class="title">Leave us a message</h3>
+          <div class="input-container">
+            <input type="text" name="name" id="uname" class="input" required pattern="[A-Za-z]{3,}" />
+            <label for="">Username</label>
+            <span>Username</span>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" id="email" class="input" required />
+            <label for="">Email</label>
+            <span>Email</span>
+          </div>
+          <div class="input-container">
+            <input type="tel" name="phone" id="phone" class="input" required pattern="[0-9]{10}" />
+            <label for="">Phone</label>
+            <span>Phone</span>
+          </div>
+          <div class="input-container textarea">
+            <textarea name="message" id="message" class="input" required maxlength="50"></textarea>
+            <label for="">Message</label>
+            <span>Message</span>
+          </div>
+          <input type="submit" value="Send" class="btn" onclick="return(send(uname,email,phone,message))" />
+        </form>
+      </div>
     </div>
-    <script>const inputs = document.querySelectorAll(".input");
+  </div>
+  <script>
+    const inputs = document.querySelectorAll(".input");
 
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
-}
+    function focusFunc() {
+      let parent = this.parentNode;
+      parent.classList.add("focus");
+    }
 
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
+    function blurFunc() {
+      let parent = this.parentNode;
+      if (this.value == "") {
+        parent.classList.remove("focus");
+      }
+    }
 
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
-});
-function send(name,email,phone,message)
-{
-	                  if(!uname.checkValidity())
-					  {
-						 alert("Enter name correctly!!!!");
-						 return false;
-					  }
-					  else if(!email.checkValidity())
-					  {
-						 alert("Enter email correctly!!!!");
-						 return false;
-					  }
-					  else if(!phone.checkValidity())
-					  {
-						 alert("Enter phone correctly!!!!");
-						 return false;
-					  }
-					  else if(!message.checkValidity())
-					  {
-						 alert("Enter message correctly!!!!");
-						 return false;
-					  }
-					else
-					{
-						alert("Successfully Sent");
-						return true;
-					}
-}</script>
-  </body>
+    inputs.forEach((input) => {
+      input.addEventListener("focus", focusFunc);
+      input.addEventListener("blur", blurFunc);
+    });
+    function send(name, email, phone, message) {
+      if (!uname.checkValidity()) {
+        alert("Enter name correctly!!!!");
+        return false;
+      } else if (!email.checkValidity()) {
+        alert("Enter email correctly!!!!");
+        return false;
+      } else if (!phone.checkValidity()) {
+        alert("Enter phone correctly!!!!");
+        return false;
+      } else if (!message.checkValidity()) {
+        alert("Enter message correctly!!!!");
+        return false;
+      } else {
+        alert("Successfully Sent");
+        return true;
+      }
+    }
+  </script>
+</body>
+
 </html>

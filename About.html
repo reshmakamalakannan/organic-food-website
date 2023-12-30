@@ -1,362 +1,409 @@
 <!doctype html>
-<html lang="en">
-         <head>
-		   <title>Arusuvai-About Us</title>
-		   <meta charset="utf-8">
-		   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@100;300;400;500&display=swap" 
-	rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-		   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		   <style>
-		   body
-		   {
-		     background-image:url('abou.jpg');
-			 background-repeat:no repeat;
-			 background-size:100%100%;
-		   }
-			#s1
-			{
-			  float:right;
+<html>
+
+<head>
+	<title>Arusuvai-About Us</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@100;300;400;500&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-image: url("images/aboutbg.jpg");
+			background-repeat: no repeat;
+			background-size: 100%100%;
+		}
+
+		#s1 {
+			float: right;
+		}
+
+		
+		.c1 {
+			word-spacing: 10px;
+			letter-spacing: 1px;
+			font-size: 15px;
+			font-family: Comic Sans MS;
+		}
+
+		#img {
+			position: sticky;
+			z-index: -1;
+			float: left;
+		}
+
+		#a1 {
+			font-size: 20px;
+			border: 2px solid green;
+			word-spacing: 10px;
+			letter-spacing: 1px;
+			font-family: Comic Sans MS;
+		}
+
+		#a2 {
+			font-size: 20px;
+			border: 2px solid green;
+			word-spacing: 10px;
+			letter-spacing: 1px;
+			font-family: Comic Sans MS;
+		}
+
+		#c2 {
+			border: 2px solid green;
+			word-spacing: 10px;
+			letter-spacing: 1px;
+			font-size: 20px;
+			font-family: Comic Sans MS;
+		}
+
+		#up {
+			position: fixed;
+			right: 10px;
+			bottom: 10px;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: #e62739;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+			color: #ffffff;
+			border: none;
+			outline: none;
+			cursor: pointer;
+		}
+
+		figcaption {
+			font-family: Comic Sans MS;
+		}
+
+		figure:hover {
+			transform: scale(1.08);
+			cursor: pointer;
+		}
+
+		@media only screen and (max-width: 600px) {
+			[class*="col-"] {
+				width: 100%;
 			}
-		    #r1
-			 {
-			   background-color:LemonChiffon;
-			  padding:20px;
-			   font-size:7;
-			   font-family:Comic Sans MS;
-			    position: relative;
-			    animation: mymove 5s infinite;
-			 }
-			 @keyframes mymove {
-  from {left: 0px;}
-  to {left: 100%;}
-}
-		   .c1
-		   {
-			 word-spacing:10px;
-			 letter-spacing:1px;
-			 font-size:15px;
-			 font-family:Comic Sans MS;
-		   }
-		   #img 
-		   {
-             position: sticky;
-             z-index: -1;
-			 float:left;
-           }
-		   #a1{
-		   font-size:20px;
-		   border:2px solid green;
-			 word-spacing:10px;
-			 letter-spacing:1px;
-			 font-family:Comic Sans MS;
-		   }
-		   #a2{
-		   font-size:20px;
-		   border:2px solid green;
-			 word-spacing:10px;
-			 letter-spacing:1px;
-			 font-family:Comic Sans MS;
-		   }
-		   #c2
-		   {
-			 border:2px solid green;
-			 word-spacing:10px;
-			 letter-spacing:1px;
-			 font-size:20px;
-			 font-family:Comic Sans MS;
-		   }
-		    #up
-			{
-			position:fixed;
-			right:10px;
-			bottom:10px;
-			width:50px;
-			height:50px;
-			border-radius:50%;
-			background:#e62739;
-			box-shadow: 0 0 10px rgba(0,0,0,0.25);
-			color:#ffffff;
-			border:none;
-			outline:none;
-			cursor:pointer;
+		}
+
+		.footer {
+			background: #282727;
+			padding: 1rem 7%;
+		}
+
+		.footer .box-container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.footer .box-container .box {
+			flex: 1 1 11rem;
+			margin: 1rem;
+		}
+
+		.footer .box-container .box h3 {
+			font-size: 1.5rem;
+			color: #fff;
+			padding: 1rem 0;
+			font-weight: normal;
+		}
+
+		.footer .box-container .box p {
+			font-size: 1.5rem;
+			color: #eee;
+			padding: 1rem 0;
+		}
+
+		.footer .box-container .box a {
+			font-size: 1.5rem;
+			color: #eee;
+			padding: 1rem 0;
+			display: block;
+		}
+
+		.footer .box-container .box a:hover {
+			color: var(--yellow);
+		}
+
+		.footer .box-container .box p i {
+			padding-right: 0.5rem;
+			color: var(--yellow);
+		}
+
+		.footer .credit {
+			font-size: 1.5rem;
+			text-align: center;
+			border-top: .2rem solid rgba(255, 255, 255, .7);
+			padding: 2rem 1rem;
+			font-weight: normal;
+			letter-spacing: .1rem;
+			color: #fff;
+		}
+
+		.footer .credit a {
+			color: var(--yellow);
+		}
+
+		img:hover {
+			transform: scale(1.08);
+		}
+
+		header {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			background: #fff;
+			box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+		}
+
+		header .logo img {
+			height: 4rem;
+		}
+
+		header .navbar a {
+			font-size: 2rem;
+			color: #aaa;
+			margin-left: 2rem;
+		}
+
+		header .navbar a:hover {
+			color: var(--green);
+		}
+
+		#menu {
+			font-size: 3rem;
+			color: #666;
+			cursor: pointer;
+			padding: .5rem 1rem;
+			border: .2rem solid rgba(0, 0, 0, .2);
+			border-radius: .5rem;
+			display: none;
+		}
+
+		@media (max-width:788px) {
+			#menu {
+				display: block;
 			}
-			figcaption
-			{
-			font-family:Comic Sans MS;
+
+			header .logo img {
+				height: 4rem;
+				width: 400px;
 			}
-			figure:hover
-              {
-                 transform:scale(1.08);
-				 cursor:pointer;
-              }
-			@media only screen and (max-width: 600px) 
-				{
-                    [class*="col-"] 
-				    {
-                      width: 100%;
-                    }
+
+			header {
+				padding: 0.2rem;
+			}
+
+			header .navbar {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 100%;
+				background: #f9f9f9;
+				text-align: center;
+				padding: 2rem 0;
+				border-top: .1rem solid rgba(0, 0, 0, .1);
+				transform: scaleY(0);
+				transform-origin: top;
+				opacity: 0;
+			}
+
+			header .navbar.nav-toggle {
+				transform: scaleY(1);
+				opacity: 1;
+			}
+
+			header .navbar a {
+				display: block;
+				font-size: 2.0rem;
+			}
+
+			td {
+				display: block;
+			}
+
+			.responsive {
+				width: 100%;
+				height: 100%;
+			}
+
+			figcaption {
+				font-family: Comic Sans MS;
+				font-size: 25px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<button id="up"><i class="material-icons">arrow_upward</i></button>
+	<script>
+		const up = document.querySelector('#up');
+		up.addEventListener("click", function () {
+			$("html,body").animate({ scrollTop: 0 }, "slow");
+		});
+	</script>
+	<header>
+		<div id="menu" class="fas fa-bars"></div>
+		<a href="#" class="logo"><img id="img" src="images/logo.png" width="250" height="120"></a>
+		<nav class="navbar">
+			<a href="index.html">HOME</a>
+			<a href="About.html">ABOUT</a>
+			<a href="Gallery.html">GALLERY</a>
+			<a href="menu.html">MENU</a>
+			<a href="Icontact.html">CONTACT</a>
+			<a href="login.html">LOGIN</a>
+			<table class="s1">
+				<a><img width='30' height='30' src='images/facebook.webp'></a>
+				<a><img width='30' height='30' src='images/insta.jpg'></a>
+				<a><img width='30' height='30' src='images/twitter.png'></a>
+			</table>
+		</nav>
+	</header>
+	<br><br><br><br>
+	<hr color="green">
+	<big>
+		<center>
+			<h1 style="font-size:7;font-family:Comic Sans MS;">OUR STORY</h1>
+		</center>
+	</big>
+	<hr color="green">
+	<br><br>
+	<img src="images/aboutcake.PNG" width="100%" height="600">
+	</header>
+	<table class="c1">
+		<td><img src="images/about-founders.jpg" width="600" height="490" class="responsive"><br></td>
+		<hr color="green">
+		<big>
+			<center>
+				<h1 style="font-size:7;font-family:Comic Sans MS;">FOUNDERS OF ARUSUVAI FOODS</h1>
+			</center>
+		</big>
+		<hr color="green">
+		<br><br>
+		<td>
+			<h2>Our Mission</h2>
+			<p id="a1">To help people live a better, healthier, and wholesome life by
+				providing them with 100% certified, authentic organic food.</p><br>
+			<h2>Our Vision</h2>
+			<p id="a2">To be the leading brand of Organic food in India.
+				To give back to the environment and advance on a path to sustainability.
+				To make consumers aware of the benefits of organic
+				food by giving them healthy choices of eating.
+				To create a big movement that would lead people to
+				switch to organic food and take up a healthier
+				lifestyle just like it used to be hundreds of years ago,
+				when pesticides were not introduced and everything
+				we ate was natural and chemical free.</p>
+		</td>
+	</table><br>
+	<div>
+		<center>
+			<table>
+				<td>
+					<figure><img src="images/fig1.avif" width="300" height="300" class="responsive">
+					</figure>
+				</td>
+				<td>
+					<figure><img src="images/fig2.jpg" width="300" height="300" class="responsive">
+					</figure>
+				</td>
+				<td>
+					<figure><img src="images/fig3.jpeg" width="300" height="300" class="responsive">
+					</figure>
+				</td>
+			</table>
+		</center>
+	</div><br><br>
+	<table>
+		<tr>
+			<td><big>
+					<h1>WHAT WE STAND FOR</h1>
+				</big></td>
+			<td id="c2">
+				<p>Health is the wholeness and integrity of living systems. In a time where humans are taking
+					away the goodness of nature,we strive to turn the wheel full circle by preserving it. Our philosophy
+					is based on
+					the principles of health, ecology, fairness, and care. We are making an effort towards a sustainable
+					agro-ecosystem
+					that ensures soil & water conservation and reduced pollution.Organic is not just a healthy way of
+					eating but also one
+					which is guilt free. When we take care of the earth,it takes care of us too.We do our bit for Mother
+					Nature. And by
+					making just one right change in life, so can everyone else.We can change the course of the things to
+					come.
+					Come to be part of the Arusuvai story.</p>
+			</td>
+		</tr>
+	</table><br><br>
+	<div class="footer">
+		<div class="box-container">
+			<div class="box">
+				<h3>Contact Info</h3>
+				<p><i class="fas fa-map-marker-alt"> </i>Chennai-600020,India</p>
+				<p><i class="fas fa-envelope"> </i>Arusuvai@gmail.com</p>
+				<p><i class="fas fa-phone"> </i>+000-000-000</p>
+				<p><i class="fas fa-phone"> </i>+111-222-333</p>
+			</div>
+			<div class="box">
+				<h3>Branch Location</h3>
+				<a href="#">India</a>
+				<a href="#">USA</a>
+				<a href="#">France</a>
+				<a href="#">Russia</a>
+			</div>
+			<div class="box">
+				<h3>Quick Links </h3>
+				<a href="#">Home</a>
+				<a href="#">About</a>
+				<a href="#">Menu</a>
+				<a href="#">Gallery</a>
+				<a href="#">Login</a>
+			</div>
+			<div class="box">
+				<h3>Follow Us</h3>
+				<a href="#">Instagram</a>
+				<a href="#">Facebook</a>
+				<a href="#">Twitter</a>
+				<a href="#">Linkedin</a>
+			</div>
+		</div>
+		<h1 class="credit">© Copyright 2023 - Arusuvai. All Rights Reserved.</h1>
+	</div>
+	<script>$(document).ready(function () {
+			$('#menu').click(function () {
+				$(this).toggleClass('fa-times');
+				$('.navbar').toggleClass('nav-toggle');
+			});
+			$(window).on('load scroll', function () {
+				$('#menu').removeClass('fa-times');
+				$('.navbar').removeClass('nav-toggle');
+				if ($(window).scrollTop() > 0) {
+					$('#scroll-top').show();
+				} else {
+					$('#scroll-top').hide();
 				}
-				.footer{
-    background:#282727;
-    padding:1rem 7%;
-}
-.footer .box-container{
-    display: flex;
-    flex-wrap: wrap;
-}
-.footer .box-container .box{
-    flex:1 1 11rem;
-    margin:1rem;
-}
-.footer .box-container .box h3{
-    font-size: 1.5rem;
-    color:#fff;
-    padding:1rem 0;
-    font-weight: normal;
-}
-.footer .box-container .box p{
-    font-size: 1.5rem;
-    color:#eee;
-    padding:1rem 0;
-}
-.footer .box-container .box a{
-    font-size: 1.5rem;
-    color:#eee;
-    padding:1rem 0;
-    display: block;
-}
-.footer .box-container .box a:hover{
-    color:var(--yellow);
-}
-.footer .box-container .box p i{
-      padding-right: 0.5rem;
-    color:var(--yellow);
-}
-.footer .credit{
-    font-size: 1.5rem;
-    text-align: center;
-    border-top: .2rem solid rgba(255,255,255,.7);
-    padding:2rem 1rem;
-    font-weight: normal;
-    letter-spacing: .1rem;
-    color:#fff;
-}
-.footer .credit a{
-    color:var(--yellow);
-}
-              img:hover
-              {
-                 transform:scale(1.08);
-              }
-			  header{
-    width:100%;
-    display: flex;
-    align-items: center;
-    background:#fff;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    position: fixed;
-    top: 0; left: 0;
-    z-index: 1000;
-}
-header .logo img{
-    height:4rem;
-}
-header .navbar a{
-    font-size: 2rem;
-    color:#aaa;
-    margin-left: 2rem;
-}
-header .navbar a:hover{
-    color:var(--green);
-}
-#menu{
-    font-size: 3rem;
-    color:#666;
-    cursor: pointer;
-    padding:.5rem 1rem;
-    border:.2rem solid rgba(0,0,0,.2);
-    border-radius: .5rem;
-    display: none;
-}
-@media (max-width:788px){
-    #menu{
-        display: block;
-    }
-	header .logo img{
-    height:4rem;
-	width:400px;
-}
-    header{
-        padding:0.2rem;	
-    }
-    header .navbar{
-        position: absolute;
-        top:100%;
-        left:0;
-        width:100%;
-        background:#f9f9f9;
-        text-align: center;
-        padding:2rem 0;
-        border-top: .1rem solid rgba(0,0,0,.1);
-        transform: scaleY(0);
-        transform-origin: top;
-        opacity: 0;
-    }
-    header .navbar.nav-toggle{
-        transform: scaleY(1);
-        opacity: 1;
-    }
-    header .navbar a{
-        display: block;
-        font-size: 2.0rem;
-    }
-	td
-	{
-	  display:block;
-	}
-	.responsive 
-	{ 
-	  width:100%;
-	  height:100%;
-	}
-	figcaption
-			{
-			font-family:Comic Sans MS;
-			font-size:25px;
-			}
-		   </style></head>
-		 <body>
-		 <button id="up"><i class="material-icons">arrow_upward</i></button>
-		<script>
-		  const up = document.querySelector('#up');
-		  up.addEventListener("click",function()
-		  {
-		  $("html,body").animate({scrollTop:0},"slow");
-		  });
-		</script> <header>
-			 <div id="menu" class="fas fa-bars"></div>
-			 <a href="#" class="logo"><img id="img" src="1.png" width="250" height="120"></a>
-             <nav class="navbar">
-			   <a href="index.html" target="_blank">HOME</a>
-				<a href="About.html" target="_blank">ABOUT</a>
-				<a href="New folder/Gallery.html" target="_blank">GALLERY</a>
-				<a href="New folder/menu.html" target="_blank">MENU</a>
-				<a href="Icontact.html" target="_blank">CONTACT</a>
-			    <a href="login.html" target="_blank">LOGIN</a>
-				<table class="s1">
-				<a><img width='30' height='30' src='facebook.webp'></a>
-				<a><img width='30' height='30' src='insta.jpg'></a>
-				<a><img width='30' height='30' src='twitter.png'></a>
-			   </table>
-         </nav></header>
-		 <br><br><br><br>
-		   <hr color="green">
-		   <big><center><h1 style="font-size:7;font-family:Comic Sans MS;">OUR STORY</h1></center></big>
-		   <hr color="green">
-		   <center><div><big><h1 id="r1">"WELCOME TO ARUSUVAI FOODS"</h1></big></div></center>
-		   <img src="3.PNG" width="100%" height="600">
-		 </header>
-		 <table class="c1">
-		   <td><img src="about.jpg" width="600" height="490" class="responsive"><br></td>
-		   <hr color="green">
-		   <big><center><h1 style="font-size:7;font-family:Comic Sans MS;">FOUNDERS OF ARUSUVAI FOODS</h1></center></big>
-		   <hr color="green">
-		   <br><br>
-		   <td><h2>Our Mission</h2>
-             <p id="a1">To help people live a better, healthier, and wholesome life by 
-			 providing them with 100% certified, authentic organic food.</p><br>
-            <h2>Our Vision</h2>
-             <p id="a2">To be the leading brand of Organic food in India.
-             To give back to the environment and advance on a path to sustainability.
-             To make consumers aware of the benefits of organic 
-			 food by giving them healthy choices of eating.
-             To create a big movement that would lead people to 
-			 switch to organic food and take up a healthier 
-             lifestyle just like it used to be hundreds of years ago, 
-             when pesticides were not introduced and everything 
-			 we ate was natural and chemical free.</p></td>
-		</table><br>
-		<div>
-		<center><table>
-		    <td><figure><img src="res.avif" width="300" height="300" class="responsive">
-	        </figure></td>
-	       <td><figure><img src="be.jpg" width="300" height="300" class="responsive">
-	       </figure></td>
-	       <td><figure><img src="bh.jpeg" width="300" height="300" class="responsive">
-	       </figure></td>
-	   </table></center></div><br><br>
-	   <table>
-	    <tr><td><big><h1>WHAT WE STAND FOR</h1></big></td>
-	    <td  id="c2"><p>Health is the wholeness and integrity of living systems. In a time where humans are taking 
-		away the goodness of nature,we strive to turn the wheel full circle by preserving it. Our philosophy is based on 
-		the principles of health, ecology, fairness, and care. We are making an effort towards a sustainable agro-ecosystem 
-		that ensures soil & water conservation and reduced pollution.Organic is not just a healthy way of eating but also one
-		which is guilt free. When we take care of the earth,it takes care of us too.We do our bit for Mother Nature. And by 
-		making just one right change in life, so can everyone else.We can change the course of the things to come. 
-		Come to be part of the Arusuvai story.</p></td></tr>
-	 </table><br><br>
-<div class="footer">
-    <div class="box-container">
-        <div class="box">
-            <h3>Contact Info</h3>
-            <p><i class="fas fa-map-marker-alt">  </i>Chennai-600020,India</p>
-            <p><i class="fas fa-envelope">  </i>Arusuvai@gmail.com</p>
-            <p><i class="fas fa-phone">  </i>+000-000-000</p>
-            <p><i class="fas fa-phone">  </i>+111-222-333</p>
-        </div>
-        <div class="box">
-            <h3>Branch Location</h3>
-            <a href="#">India</a>
-            <a href="#">USA</a>
-            <a href="#">France</a>
-            <a href="#">Russia</a>
-        </div>
-        <div class="box">
-            <h3>Quick Links </h3>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Menu</a>
-            <a href="#">Gallery</a>
-            <a href="#">Login</a>
-        </div>
-        <div class="box">
-            <h3>Follow Us</h3>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Linkedin</a>
-        </div>
-    </div>
-    <h1 class="credit">© Copyright 2023 - Arusuvai. All Rights Reserved.</h1>
-</div>
-<script>$(document).ready(function(){
-  $('#menu').click(function(){
-      $(this).toggleClass('fa-times');
-      $('.navbar').toggleClass('nav-toggle');
-  });
-  $(window).on('load scroll',function(){
-    $('#menu').removeClass('fa-times');
-    $('.navbar').removeClass('nav-toggle');
-    if($(window).scrollTop() > 0){
-      $('#scroll-top').show();
-    }else{
-      $('#scroll-top').hide();
-    }
-  });
-  $('a[href*="#"]').on('click',function(e){
-    e.preventDefault();
-    $('html, body').animate({
-      scrollTop : $($(this).attr('href')).offset().top,
-    },
-      500,
-      'linear'
-    );
-  });
-});</script>
-	</body>
+			});
+			$('a[href*="#"]').on('click', function (e) {
+				e.preventDefault();
+				$('html, body').animate({
+					scrollTop: $($(this).attr('href')).offset().top,
+				},
+					500,
+					'linear'
+				);
+			});
+		});</script>
+</body>
+
 </html>
